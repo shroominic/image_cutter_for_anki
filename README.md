@@ -1,4 +1,4 @@
-# Anki Card Automatisation
+# Anki Card Automation
 
 ### Anki
 
