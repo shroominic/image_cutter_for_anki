@@ -7,7 +7,8 @@ You can create your own flashcards, the rest is done by anki.
 
 ### Problem
 
-I want to make some Anki Cards out of [this PDF](http://mathphys-online.de/wp-content/uploads/2014/05/z_Zusfassung_lin-alg-geometrie.pdf) but this task seems very boring to me.
+I want to make some Anki Cards out of [this PDF](http://mathphys-online.de/wp-content/uploads/2014/05/z_Zusfassung_lin-alg-geometrie.pdf) 
+because i need to learn for my A-levels... but just to make lots of screen captures seems very boring to me.
 
 ### Solution
 
