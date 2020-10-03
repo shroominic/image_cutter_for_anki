@@ -1,5 +1,6 @@
-import os
 from PIL import Image
+import os
+import turtlele
 
 os.chdir('images')
 
@@ -7,27 +8,40 @@ image_path_list = os.listdir()
 image_list = []
 
 for path in image_path_list:
-    image_list.append(Image.open(path))
+    if path.endswith('.jpg'):
+        image_list.append(Image.open(path))
 
-turtle = (1, 1)
+def create_card(image, positions, counter):
+    card_front = image.crop((
+        positions[0][0][0], 
+        positions[0][0][1], 
+        positions[0][1][0], 
+        positions[0][1][1]))
+    card_back = image.crop((
+        positions[1][0][0], 
+        positions[1][0][1], 
+        positions[1][1][0], 
+        positions[1][1][1]))
+    card_front.save(f'card_{counter}_front.jpg')
+    card_back.save(f'card_{counter}_back.jpg')
 
-def is_pixel_white(pixel):
-    if pixel != 255:
-        return False
-    return True
+os.chdir('./result')
 
-def turtle_movement(image):
-    turtle = (0, image.size[1]/2)
-    pixel = image.getpixel(turtle)
+card_counter = 0
 
-    while(is_pixel_white(pixel)):
-        turtle = (turtle[0] + 1, turtle[1])
-        pixel = image.getpixel(turtle)
+for image in image_list:
+    print(image)
+    turtle = turtlele.Turtle(image)
+    
+    turtle.get_to_start()
+    while True:
+        try:
+            turtle.move_to_next_card()
+            create_card(image, turtle.get_card_posisitons(), card_counter)
+            card_counter += 1
 
-    return turtle
-
-
-print(turtle_movement(image_list[1]))
-
-for image in image_list: #Going through Images in image_list
-    pass
+        except:
+            break
+    
+    
+    
