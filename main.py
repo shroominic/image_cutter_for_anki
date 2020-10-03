@@ -2,12 +2,12 @@ from PIL import Image
 import os, turtlele, anki
 
 
-image_path_list = os.listdir('./images')
+image_path_list = os.listdir('./image_input')
 image_list = []
 
 for path in image_path_list:
     if path.endswith('.jpg'):
-        image_list.append(Image.open(f'./images/{path}'))
+        image_list.append(Image.open(f'./image_input/{path}'))
 
 def create_card(image, positions, counter):
     card_front = image.crop((
