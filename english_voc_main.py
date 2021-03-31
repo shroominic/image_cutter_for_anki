@@ -1,9 +1,9 @@
 from PIL import Image
 import os
-import 
+import turtle
 import numpy as np
 
-image_path_list = os.listdir('./english_voc_images')
+image_path_list = os.listdir('english voc cards/english_voc_images')
 image_path_list.sort()
 image_list = []
 card_counter = 0

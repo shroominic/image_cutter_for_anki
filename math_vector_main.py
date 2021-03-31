@@ -4,7 +4,7 @@ import turtle
 import anki
 
 
-image_path_list = os.listdir('math_images')
+image_path_list = os.listdir('math_cards/math_images')
 image_list = []
 
 for path in image_path_list:
