@@ -1,6 +1,6 @@
 from PIL import Image
 import os
-import turtlele
+import turtle
 import anki
 
 
@@ -31,7 +31,7 @@ card_counter = 0
 
 for image in image_list:
     print(image)
-    turtle = turtlele.Turtle(image)
+    turtle = turtle.Turtle(image)
 
     turtle.get_to_start()
     while True:

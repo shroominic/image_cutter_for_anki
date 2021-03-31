@@ -1,6 +1,6 @@
 from PIL import Image
 import os
-import turtlele
+import 
 import numpy as np
 
 image_path_list = os.listdir('./english_voc_images')
@@ -34,7 +34,7 @@ def create_card(input_image, positions, counter, text):
     card_extra.save(f'./result/{text}_card_{counter}_extra.jpg')
 
 
-class EnglishTurtle(turtlele.Turtle):
+class EnglishTurtle(turtle.Turtle):
 
     def get_to_start(self):
         self.position = (float(round(self.image.size[0] / 1.35)), 0.)

@@ -3,10 +3,10 @@ result/*.jpg
 result/english/*
 result/german/*
 result/extra/*
-english_voc_images/*
-!english_voc_images/context-1-0.jpg
-math_images/*
-!math_images/mathe_1.jpg
+english voc cards/english_voc_images/*
+!english voc cards/english_voc_images/context-1-0.jpg
+math_cards/math_images/*
+!math_cards/math_images/mathe_1.jpg
 error/*
 output/*.apkg
 .idea
